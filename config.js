@@ -105,7 +105,7 @@ const schema = {
   port: {
     doc: 'The port to bind the application to.',
     format: 'port',
-    default: 10000,
+    default: process.env.PORT || 10000 || 0,
     env: 'PORT'
   },
   rsaPrivateKey: {
